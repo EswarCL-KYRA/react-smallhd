@@ -41,7 +41,7 @@ function Reg() {
     catch(err){
       console.log("error in the form submission");
     }
-    axios.put("https://fdw.smallhd.com:4001/warranty",formdata,{"Content-Type":"multipart/form-data"})
+    axios.put(`${process.env.APP_URL}/warranty`,formdata,{"Content-Type":"multipart/form-data"})
     .then((response)=>
       response.data
     ).then((info)=>{
